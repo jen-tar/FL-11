@@ -1,0 +1,281 @@
+@mixin underline() {
+  background-color: $underlineColor;
+  z-index: -1;
+  position: absolute;
+}
+
+.header_button,
+.section_banner_button,
+p[class*="heading"] {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.landing-logo p,
+p[class*="text"] {
+  font-family: "Hind", sans-serif;
+}
+
+body {
+  background: $bodyColor;
+  margin: 0;
+}
+
+.header-wrap,
+.section {
+  width: 845px;
+  margin: auto;
+}
+
+.landing-logo {
+  display: flex;
+  padding-top: 13px;
+  align-items: center;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  p {
+    margin-top: 4px;
+    margin-left: 11px;
+    margin-bottom: 0px;
+    line-height: 13px;
+    font-size: 17px;
+    font-weight: lighter;
+    color: map-get($text-color, "header");
+  }
+
+  span {
+    display: block;
+    font-size: 8px;
+    text-align: center;
+    font-family: "Fresca", sans-serif;
+    color: map-get($text-color, "header");
+  }
+}
+
+.header {
+  background: $backgroundImg;
+  display: block;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-bottom-right-radius: 40% 40%;
+
+  &-wrap > * {
+    max-width: 60%;
+  }
+
+  &_heading {
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-right: 450px;
+    line-height: 50px;
+    color: map-get($text-color, "header");
+    position: relative;
+    z-index: 0;
+
+    &::after {
+      content: "";
+      height: 18px;
+      width: 202px;
+      bottom: 3px;
+      left: 0px;
+      @include underline();
+    }
+  }
+
+  &_text {
+    font-size: 10px;
+    font-weight: 50;
+    width: 400px;
+    color: map-get($text-color, "header");
+  }
+
+  &_button {
+    background: $buttonColor;
+    width: 98px;
+    height: 33px;
+    margin-top: 32px;
+    border: $buttonColor;
+    color: map-get($text-color, "body");
+    border-radius: 3px;
+  }
+}
+
+p.section_text {
+  font-size: 30px;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 18px;
+  margin-bottom: 27px;
+  color: map-get($text-color, "header");
+
+  &::after {
+    content: "";
+    height: 10px;
+    width: 44%;
+    bottom: 7px;
+    right: 10px;
+    @include underline();
+  }
+}
+
+.section {
+  display: block;
+  text-align: center;
+
+  &_card {
+    background: $elementColor;
+    width: 32%;
+    text-align: center;
+    padding: 12px 1px 5px;
+
+    &_wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &_heading {
+      color: map-get($text-color, "body");
+      display: inline-block;
+      z-index: 0;
+      position: relative;
+      margin-bottom: 9px;
+      margin-top: 13px;
+    }
+
+    &_text {
+      display: block;
+      margin: auto;
+      color: map-get($text-color, "body");
+      font-size: 10px;
+      width: 85%;
+      font-weight: lighter;
+      margin-bottom: 10px;
+    }
+
+    &_underline {
+      @include underline();
+      height: 9px;
+      left: 0;
+      top: 10px;
+      width: 100%;
+    }
+
+    &_img {
+      display: block;
+      margin: auto;
+      width: 90%;
+    }
+  }
+
+  &_banner {
+    display: flex;
+    width: 660px;
+    height: 100px;
+    background: linear-gradient(
+      90deg,
+      $gradientColor1 0%,
+      $gradientColor2 100%
+    );
+    margin: auto;
+    margin-top: 95px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+
+    &_heading {
+      font-size: 20px;
+      text-align: left;
+      font-weight: bold;
+      color: map-get($text-color, "header");
+      margin-top: 5px;
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        @include underline();
+        height: 9px;
+        left: 19%;
+        top: 9px;
+        width: 10%;
+        z-index: -1;
+      }
+    }
+
+    &_button {
+      @extend .header_button;
+      margin: 0;
+    }
+
+    &_text_wrap {
+      width: 63%;
+      text-align: left;
+      margin-right: 5px;
+      line-height: 13px;
+    }
+
+    &_text {
+      color: map-get($text-color, "body");
+      font-size: 11px;
+    }
+  }
+}
+
+.footer {
+  background: $elementColor;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  margin-top: -53px;
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: map-get($text-color, "body");
+    font-size: 10px;
+    font-weight: lighter;
+    padding: 50px 0px 40px;
+    background: $elementColor;
+    width: 845px;
+    margin: 20px auto 0px;
+  }
+
+  &_text {
+    width: 30%;
+  }
+
+  &_logo {
+    padding: 0;
+
+    p,
+    span {
+      color: map-get($text-color, "body");
+      font-weight: lighter;
+    }
+  }
+}
+
+button:hover {
+  background: lighten($buttonColor, 10%);
+  cursor: pointer;
+}
+
+button:active {
+  background: darken($buttonColor, 10%);
+  box-shadow: 0px 0px 2px #21232e;
+}
