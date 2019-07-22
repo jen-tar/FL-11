@@ -3,13 +3,13 @@ function getNumbers(a) {
     let result = [];
     for (let i = 0; i < a.length; i++) {
         if (!isNaN(parseInt(a[i]))) {
-            result.push(a[i]);
-            console.log(result);
+            result.push(parseInt(a[i]));
+           
         }
     }
     return result;
 }
-getNumbers('n1um3ber95');
+
 
 function findTypes(...n) {
     let result = {};
