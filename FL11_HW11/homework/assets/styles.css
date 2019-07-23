@@ -1,0 +1,62 @@
+h1 {
+    color: lightskyblue;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section_inner {
+    width: 600px;
+    margin: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    color: lightskyblue;
+}
+
+.delete {
+    float: right;
+}
+
+i {
+    color: lightskyblue;
+}
+
+.addNewAction {
+    height: 40px;
+    width: 500px;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.add_box {
+    font-size: 40px;
+}
+
+#addAction {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.editor_wrapper {
+    display: none;
+    align-items: center;
+}
+
+h2 {
+    color: red;
+    display: none;
+
+}
+
+hr {
+    border: 3px solid rgba(135, 206, 250, 0.2);
+    width: 100%;
+    margin-bottom: 20px;
+
+}

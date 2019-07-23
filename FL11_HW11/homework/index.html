@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 11 - TODO Cat List</title>
+  <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+  <div id="root"></div>
+
+
+  <section class="todo_list">
+    <section class="section_inner">
+      <h1>TODO Cat List</h1>
+      <h2>Maximum item per list are created</h2>
+      <form class="form">
+        <div id="addAction">
+          <input type="text" class="addNewAction" placeholder="Add new action">
+          <button id="plus" disabled>
+            <i class="material-icons add_box">add_box</i>
+          </button>
+
+        </div>
+        <hr>
+
+        <div class="point new_point" style="display: none" draggable="true">
+          <div class="label">
+            <input type="checkbox" class="check">
+            <span class="point_content"></span>
+            <i class="material-icons edit"> edit </i>
+            <i class="material-icons delete"> delete </i>
+          </div>
+
+          <div class="editor_wrapper">
+            <input type="text" class="field_editor">
+            <i class="material-icons save"> save </i>
+          </div>
+        </div>
+
+        <div class="checkbox">
+          <div class="point" draggable="true">
+           <div class="label">
+              <input type="checkbox" class="check">
+              <span class="point_content">Find the cat</span>
+              <i class="material-icons edit"> edit </i>
+              <i class="material-icons delete"> delete </i>
+           </div>
+
+            <div class="editor_wrapper">
+              <input type="text" class="field_editor">
+              <i class="material-icons save"> save </i>
+            </div>
+          </div>
+          <div class="point" draggable="true">
+            <div class="label">
+              <input type="checkbox" class="check">
+              <span class="point_content">Prepare cat's carry</span>
+              <i class="material-icons edit"> edit </i>
+              <i class="material-icons delete"> delete </i>
+            </div>
+
+            <div class="editor_wrapper">
+              <input type="text" class="field_editor">
+              <i class="material-icons save"> save </i>
+            </div>
+          </div>
+          <div class="point" draggable="true">
+              <div class="label">
+
+              <input type="checkbox" class="check">
+              <span class="point_content">Bathe a cat</span>
+              <i class="material-icons edit"> edit </i>
+              <i class="material-icons delete"> delete </i>
+              </div>
+
+            <div class="editor_wrapper">
+              <input type="text" class="field_editor">
+              <i class="material-icons save"> save </i>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+  </section>
+  <script src="./src/app.js"></script>
+
+</body>
+
+</html>
